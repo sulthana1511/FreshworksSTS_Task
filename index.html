@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <section class="lnkedin-page">
+        <div class="header">
+            <div class="logo-bar">
+                <div class="logo">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+                <nav class="nav-links">
+                    <li><a class="active-link" href="#"><i class="fa-solid fa-house-chimney"></i> <span>Home</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-group"></i> <span>My Network</span></a></li>
+                    <li><a href="#"><i class="bi bi-briefcase-fill"></i> <span>Jobs</span></a></li>
+                    <li><a href="#"><i class="bi bi-chat-dots-fill"></i> <span>Messaging</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+                    <li><a href="#"><i class="bi bi-person-circle"></i> <span>Me</span></a></li>
+                    <li><a href="#"><i class="bi bi-three-dots-vertical"></i> <span>For Business</span></a></li>
+                    <span><li><a href="#">Try Premium for<br> free</a></li></span>
+                </nav>
+        </div>
+        <div class="container">
+            <div class="container1">
+                <div class="left-side">
+                    <div class="left-content">
+                        <div class="profile">
+                            <img class="bg-img"src="./assets/cta-bg.jpg" alt="">
+                            <img class="profile-img" src="./assets/profile_pic.jpg" alt="">
+                            <a href="#">Afrin Sulthana A</a>
+                            <p class="gray">Executive L&D</p>
+                        </div>
+                        <hr>
+                        <div class="profile-content">
+                            <p class="gray">Connections<span>74</span></p>
+                            <p>Grow your network</p>
+                            <p class="gray">Who's viewed your profile<span>39</span></p>
+                        </div>    
+                        <hr>
+                        <div class="profile-content profile-content1">      
+                            <p class="gray">Access exclusive tools and insights</p>
+                            <i class="bi bi-square-fill golden-square" ></i><a href="#">Try Premium for free</a>
+                        </div>
+                        <hr>
+                        <div class="profile-content profile-content2">
+                            <i class="bi bi-bookmark-fill"></i><p>My items</p>
+                            <br>
+                        </div>
+                    </div> 
+                    <div class="left-content1">
+                        <div class="recent">
+                            <h4>Recent</h4>
+                            <ul>
+                                <li><i class="bi bi-hash"></i>php</li>
+                                <li><i class="bi bi-hash"></i>mobileapplications</li>
+                                <li><i class="bi bi-hash"></i>programming</li>
+                                <li><i class="bi bi-hash"></i>technology</li>
+                                <li><i class="bi bi-hash"></i>music</li>
+                            </ul>
+                        </div>
+                        <div class="anchor">
+                            <a href="#">Groups</a><br>
+                            <a href="#">Events</a><span><i class="bi bi-plus-lg"></i></span><br>
+                            <a href="#">Followed Hashtags</a><br>
+                            <li><i class="bi bi-hash"></i>php</li>
+                            <li><i class="bi bi-hash"></i>mobileapplications</li>
+                            <li><i class="bi bi-hash"></i>programming</li>
+                            <li>Show more<i class="bi bi-chevron-compact-down"></i></li>
+                        </div>  
+                        <hr>
+                        <h5>Discover more</h5>  
+                    </div>   
+                </div>
+                <div class="center-side">
+                    <div class="main-content">
+                      <div class="img-bar">
+                        <img src="./assets/profile_pic.jpg" alt="">
+                        <div class="big_searchbar">
+                          <input type="text" placeholder="Start a post">
+                        </div>
+                      </div>
+                      <div class="main-links">
+                        <div class="media photo"><i class="bi bi-card-image"></i>Photo</div>
+                        <div class="media video"><i class="bi bi-play-btn-fill"></i>Video</div>
+                        <div class="media event"><i class="bi bi-calendar2-date"></i>Event</div>
+                        <div class="media article"><i class="bi bi-card-heading"></i>Write article</div>
+                      </div>
+                    </div>
+                    <div class="hr">
+                      <hr>
+                      <div><span>Sort by:</span> Top<i class="bi bi-caret-down-fill"></i></div>
+                    </div>
+                  
+                    <!-- Placeholder for dynamically generated posts -->
+                    <div id="posts-container"></div>
+                      <!-- Template for a single post (hidden by default) -->
+                 <template id="post-template">
+                  <div class="main-content1">
+                    <div class="head">
+                      <img class="user-pic" src="" alt="User Avatar">
+                      <div>
+                        <h3></h3>
+                        <p class="gray"></p>
+                        <p class="gray">1h.<i class="bi bi-globe-americas"></i></p>
+                      </div>
+                    </div>
+                    <div class="img-sec">
+                      <p class="post-title"></p>
+                      <p class="post-body"></p>
+                    </div>
+                    <div class="media-content">
+                      <div class="like"><a><i class="bi bi-hand-thumbs-up"></i>Like</a></div>
+                      <div class="comment"><a class="dynamic-comments"><i class="bi bi-chat-text"></i><span class="comment-count">0 Comments</span> <!-- Display comment count here --></a></div>
+                      <div class="report"><a><i class="bi bi-recycle"></i>Report</a></div>
+                      <div class="send"><a><i class="bi bi-send-fill"></i>Send</a></div>
+                    </div>
+                     <!-- Comments Section -->
+                     <div class="comments-container collapsed">
+                        <div class="comments"></div>
+                    </div>
+                    <div class="foot">
+                      <i class="bi bi-1-square-fill"></i><span>Be the first to react</span>
+                    </div>
+                  </div>
+                </template>
+                </div>
+            
+  
+                
+
+                <div class="right-side">
+                    <div class="right-content">
+                        <h2>LinkedIn News<i class="bi bi-1-square-fill"></i></h2>
+                        <ul>
+                            <li>Here are 2023's top companiesto wat...</li><p>Top News <span>.</span> 8784 readers</p>
+                            <li>Meta cuts core roles:workers react</li><p>1d ago <span>.</span> 35,908 readers</p>
+                            <li>Engineering colleges catch the Al bug</li><p>1d ago <span>.</span> 180 readers</p>
+                            <li>Double scoop for icecream market</li><p>1d ago</p>
+                            <li>Education hit hard by phishing</li><p>1d ago</p>
+                        </ul>
+                        <p>Show more<i class="bi bi-chevron-compact-down"></i></p>
+                    </div>
+
+                    <div class="right-content1">
+                        <p class="side">Ad <span><i class="fa-solid fa-ellipsis"></i></span></p><br>
+                        <p class="center">Afrin, Unlock your full potential with LinkedIn Premium</p>
+                        <div class="my-div">
+                            <img class="right-img" src="./assets/profile_pic.jpg" alt="">
+                            <i class="bi bi-key-fill"></i>
+                            <p class="end">See who's viewed your profile in the last 90 days</p>
+                            <button>Try for free</button>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Accessibility</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Privacy & Terms</a><i class="bi bi-caret-down-fill"></i></li>
+                            <li><a href="#">Ad Choices</a></li>
+                            <li><a href="#">Advertising</a></li>
+                            <li><a href="#">Business Services</a><i class="bi bi-caret-down-fill"></i></li>
+                            <li><a href="#">Get the LinkedIn app</a></li>
+                            <li><a href="#">More</a></li>
+                        </ul>
+                        <div>
+                            <span>Linked<i class="fa-brands fa-linkedin"></i></span> LinkedIn Corporation &copy; 2023
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+    </section>
+  <script src="script.js"></script>
+
+</body>
+</html>
